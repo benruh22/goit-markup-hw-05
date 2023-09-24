@@ -7,10 +7,6 @@
   <title>WEBSTUDIO</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
   <link rel="preconnect" href="https://www.w3.org/Graphics/SVG/IG/reosurces/svgprimer.html#SVG_in_HTML">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
@@ -49,12 +45,8 @@
     <section class="section section-hero">
       <div class="container hero-container">
         <h1 class="hero-title">Effective Solutions<br>
-        for Your Business</h1><button type="button" class="hero-button">order services</button>
+        for Your Business</h1><button type="button" data-modal-open="" class="hero-button">order services</button>
       </div>
-
-
-
-
     </section>
     <section class="section section-features">
       <div class="container section-container">
@@ -190,41 +182,28 @@
         <ul class="costumer-item">
           <li class="customer-item-lists">
             <a class="customer-item-link">
-              <div class="customer-icon">
-                <img src="images/img/client1.svg" alt="">
-              </div>
-          </a>
+            <div class="customer-icon"><img src="images/img/client1.svg" alt="client1"></div></a>
           </li>
           <li class="customer-item-lists">
             <a class="customer-item-link">
-            <div class="customer-icon">
-              <img src="images/img/client2.svg" alt="">
-            </div>
-          </a>
+            <div class="customer-icon"><img src="images/img/client2.svg" alt="client2"></div></a>
+          </li>
           <li class="customer-item-lists">
             <a class="customer-item-link">
-              <div class="customer-icon">
-                <img src="images/img/client3.svg" alt="">
-              </div>
-          </a>
+            <div class="customer-icon"><img src="images/img/client3.svg" alt="client3"></div></a>
+          </li>
           <li class="customer-item-lists">
             <a class="customer-item-link">
-              <div class="customer-icon">
-                <img src="images/img/client4.svg" alt="">
-              </div>
-          </a>
+            <div class="customer-icon"><img src="images/img/client4.svg" alt="client4"></div></a>
+          </li>
           <li class="customer-item-lists">
             <a class="customer-item-link">
-              <div class="customer-icon">
-                <img src="images/img/client5.svg" alt="">
-              </div>
-          </a> 
+            <div class="customer-icon"><img src="images/img/client5.svg" alt="client5"></div></a>
+          </li>
           <li class="customer-item-lists">
             <a class="customer-item-link">
-              <div class="customer-icon">
-                <img src="images/img/client6.svg" alt="">
-              </div>
-          </a>
+            <div class="customer-icon"><img src="images/img/client6.svg" alt="client6"></div></a>
+          </li>
         </ul>
       </div>
     </section>
@@ -232,30 +211,69 @@
   <footer class="footer">
     <div class="container section-footer">
       <div>
-        <a href="./index.html" class="footer-logo">
-          <span class="iris">WEB</span>STUDIO
-        </a>
+        <a href="./index.html" class="footer-logo"><span class="iris">WEB</span>STUDIO</a>
         <p class="footer-caption">Increase the flow of customers and<br>
         sales for your business with digital<br>
         marketing and growth solutions.</p>
       </div>
-    <div class="footer-items">
-      <h3 class="footer-icon">social media</h3>
-      <ul class="footer-icon">
-        <li class="footer-icon-items">
-          <div class="footer-icon-list"><img src="socialicons/instagram.svg" alt="instagram" class="link"></div>
-        </li>
-        <li class="footer-icon-items">
-          <div class="footer-icon-list"><img src="socialicons/twitter.svg" alt="twitter" class="link"></div>
-        <li class="footer-icon-items">
-          <div class="footer-icon-list"><img src="socialicons/facebook.svg" alt="facebook" class="link"></div>
-        </li>
-        <li class="footer-icon-items">
-          <div class="footer-icon-list"><img src="socialicons/linkedin.svg" alt="linkedin" class="link"></div>
-        </li>
-      </ul> </div>
+      <div class="footer-items">
+        <h3 class="footer-icon">social media</h3>
+        <ul class="footer-icon">
+          <li class="footer-icon-items">
+            <div class="footer-icon-list"><img src="socialicons/instagram.svg" alt="instagram" class="link"></div>
+          </li>
+          <li class="footer-icon-items">
+            <div class="footer-icon-list"><img src="socialicons/twitter.svg" alt="twitter" class="link"></div>
+          </li>
+          <li class="footer-icon-items">
+            <div class="footer-icon-list"><img src="socialicons/facebook.svg" alt="facebook" class="link"></div>
+          </li>
+          <li class="footer-icon-items">
+            <div class="footer-icon-list"><img src="socialicons/linkedin.svg" alt="linkedin" class="link"></div>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
+  <div class="modal is-hidden" data-modal="">
+    <div class="modal-content">
+      <button class="modal-close" data-modal-close=""><svg width="16" height="16">
+      <use href="./images/close.svg"></use></svg></button>
+      <div class="modal-header">
+        <h3>Leave your contacts and we will call you back</h3>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" method="post" autocomplete="off" action="#">
+          <div class="form-group">
+            <div class="form-group-input">
+              <svg width="16" height="16">
+              <use href="./images/svg/icons.svg#user"></use></svg>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group-input">
+              <svg width="16" height="16">
+              <use href="./images/svg/icons.svg#phone"></use></svg>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group-input">
+              <svg width="16" height="16">
+              <use href="./images/svg/icons.svg#email"></use></svg>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment</label> 
+            <textarea id="comment" name="comment" placeholder="Text input"></textarea>
+          </div>
+          <div class="form-group-agree"></div>
+          <div class="submit-btn">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/modal.js"></script>
 </body>
 </html>

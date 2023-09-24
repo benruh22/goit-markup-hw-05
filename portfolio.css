@@ -143,7 +143,6 @@ button {
 }
 .service-item-details {
   padding: 32px 16px;
-  
   background: var(--white);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
@@ -211,34 +210,34 @@ button {
 
 /*================*/
 
-.service-box {
 
+.service-box {
+  position: relative;
   width: 360px;
   height: 300px;
+  margin: 0 auto;
+  background-color: #bdbdbd;
+  overflow: visible;
+  
 }
 
-
-
-.caption {
-  position: relative;
-  overflow: hidden;
-
-
-}
-
-.caption::before {
-  content: ' ';
+.caption-overlay {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: transparent;
+  left: 1;
+  width: 100%;
+  height: 100%;
+  background: var(--iris);
+  overflow-clip-margin: content-box;
  
 }
 
-.caption:hover::before {
-  background: var(--iris);
+.service-box:hover .caption-overlay {
+  transform: translateX(0);
+  transform: translateY(-100%);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 
@@ -246,39 +245,15 @@ button {
 .caption-text {
   color: var(--cloud);
   font-size: 16px;
-
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.32px;
-  text-align: justify;
-margin-top: 40px;
-margin-left: 32px;
-width: 296px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+padding: 0 32px;
 
 }
-
-.caption-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  color: white;
-
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-
-  transition: -webkit-transform .35s ease-out;
-  transition:         transform .35s ease-out;
-}
-
-.caption:hover .caption-overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-
 
 
 
