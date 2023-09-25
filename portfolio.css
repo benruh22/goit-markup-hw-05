@@ -47,8 +47,8 @@ a {
   justify-content: space-between;
 }
 .nav-menu {
-display: inline-flex;
-gap: 76px;
+  display: inline-flex;
+  gap: 76px;
 }  
 .header {
   border-bottom: 1px solid var(--cornflower);
@@ -348,14 +348,20 @@ padding: 0 32px;
   }
   
 .section-footer {
-
   display: flex;
 }
 
 .footer-items {
-
  padding-left: 120px;
 }
+
+
+
+.footer-icon-list:hover {
+  border: var(--ocean); 
+  background: var(--green);
+ 
+ }
 
 
 /*-----------*/
@@ -365,7 +371,7 @@ padding: 0 32px;
 }
 
 .link:hover {
-  animation: shake 2s;
+  animation: shake 3s;
 }
 
 @keyframes shake {

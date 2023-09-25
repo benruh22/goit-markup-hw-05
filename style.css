@@ -370,7 +370,7 @@ img {
 }
 
 .link:hover {
-  animation: shake 2s;
+  animation: shake 4s;
 }
 
 @keyframes shake {
@@ -462,17 +462,13 @@ img {
 .customer-item-lists:hover {
  border: var(--ocean); 
  border: 1px solid var(--ocean);
- 
+
 }
 
 .customer-item-lists:hover .customer-item-link {
 color: var(--ocean);
 fill: var(--lightslate);
 }
-
-
-
-
 
 .header-customer {
   padding-top: 120px;
@@ -552,8 +548,13 @@ fill: var(--lightslate);
 }
 
 
-/*========*/
+.footer-icon-list:hover {
+  border: var(--ocean); 
+  background: var(--green);
+ 
+ }
 
+/*========*/
 
 .modal{
   position: fixed;
@@ -585,7 +586,7 @@ fill: var(--lightslate);
 }
 
 .modal-content{
-  width: 408px;
+  width: 440px;
   max-height: 100%;
   background: var(--white);
   border-radius: 4px;
@@ -608,42 +609,67 @@ fill: var(--lightslate);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--cornflower);
+ color: var(--navyblue);
   border: 1px solid rgba(0, 0, 0, 0.10);
   transition: background-color var(--transition-duration) var(--animation-timing-function), color var(--transition-duration) var(--animation-timing-function);
 }
 
+
+.modal-icon {
+width: 18px;
+height: 18px;
+}
+
+.close-icon {
+width: 24px;
+height: 24px;
+flex-shrink: 0;
+
+fill: var(--cornflower);
+stroke-width: 1px;
+stroke: rgba(0, 0, 0, 0.10);
+
+}
+
+
+
 .modal-close:hover {
   background-color: var(--ocean);
-  color: var(--white);
+ border-color: var(--ocean);
+ color: var(--cloud);
 }
 
-.modal-close svg {
+.modal-close {
   fill: currentColor;
-  transition: fill var(--transition-duration) var(--animation-timing-function);
+  transition: fill var(--transition-duration) var(--animation-timing-function), color var(--transition-duration) var(--animation-timing-function);
+
 }
 
-.modal-close:hover svg {
+.modal-close:hover  {
   fill: var(--white);
 }
 
-.modal-header{
+.modal-icon {
+  fill: var(--white);
+}
+
+.modal-header {
   display: flex;
   justify-content:center;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.modal-header h3{
+.modal-header h3 {
   color: var(--navyblue);
-  font-family: "Roboto", sans-serif;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.32px;
 }
 
-.modal-body{
+.modal-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,7 +677,7 @@ fill: var(--lightslate);
   gap: 24px;
 }
 
-.modal-form{
+.modal-form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -660,7 +686,7 @@ fill: var(--lightslate);
   gap: 16px;
 }
 
-.form-group{
+.form-group {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -669,9 +695,8 @@ fill: var(--lightslate);
   gap: 4px;
 }
 
-.form-group label{
+.form-group label { 
   color: var(--lightslate);
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 
@@ -686,7 +711,7 @@ fill: var(--lightslate);
   padding: 8px 16px;
 }
 
-.form-group-input svg{
+.form-group-input .modal-icon {
   fill: var(--navyblue);
 }
 
@@ -694,18 +719,17 @@ fill: var(--lightslate);
   width: 100%;
   border: none;
   outline: none;
-  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: var(--navyblue);
   background: transparent;
 }
 
-.form-group-input svg{
+.form-group-input .modal-icon{
   fill: var(--lightslate);
   transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
-.form-group-input:focus-within svg{
+.form-group-input:focus-within .modal-icon {
   fill: var(--iris);
 }
 
@@ -750,7 +774,7 @@ fill: var(--lightslate);
   display: none;
 }
 
-.form-group-agree label svg{
+.form-group-agree label .modal-icon{
   width: 16px;
   height: 16px;
   border: 1px solid var(--navybluemodal);
@@ -760,7 +784,7 @@ fill: var(--lightslate);
   transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
-.form-group-agree input[type="checkbox"]:checked + label svg{
+.form-group-agree input[type="checkbox"]:checked + label .modal-icon {
   fill: var(--white);
   background-color: var(--iris);
 }
